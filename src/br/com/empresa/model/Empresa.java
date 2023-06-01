@@ -14,8 +14,6 @@ public class Empresa {
 
     private String CNPJ;
 
-    private String ajudaFinaceira;
-
     private Ongs distribuicao;
 
     private Sistema cadastro;
@@ -34,7 +32,6 @@ public class Empresa {
         this.getColaboradores().remove(colaboladores);
         return this;
     }
-
 
     public String getNome() {
         return nome;
@@ -60,13 +57,6 @@ public class Empresa {
         this.CNPJ = CNPJ;
     }
 
-    public String getAjudaFinaceira() {
-        return ajudaFinaceira;
-    }
-
-    public void setAjudaFinaceira(String ajudaFinaceira) {
-        this.ajudaFinaceira = ajudaFinaceira;
-    }
 
     public Ongs getDistribuicao() {
         return distribuicao;
@@ -98,7 +88,6 @@ public class Empresa {
                 "nome='" + nome + '\'' +
                 ", produtos='" + produtos + '\'' +
                 ", CNPJ='" + CNPJ + '\'' +
-                ", ajudaFinaceira='" + ajudaFinaceira + '\'' +
                 ", distribuicao=" + distribuicao +
                 ", cadastro=" + cadastro +
                 ", colaboradores=" + colaboradores +

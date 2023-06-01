@@ -9,6 +9,10 @@ public class Agricultor {
 
     private int quantidade;
 
+    private String nome;
+
+    private String CPF;
+
     private Sistema cadastro;
 
     private Ongs distribuicao;
@@ -16,9 +20,11 @@ public class Agricultor {
     public Agricultor() {
     }
 
-    public Agricultor(String plantcao, int quantidade, Sistema cadastro, Ongs distribuicao) {
+    public Agricultor(String plantcao, int quantidade, String nome, String CPF, Sistema cadastro, Ongs distribuicao) {
         this.plantcao = plantcao;
         this.quantidade = quantidade;
+        this.nome = nome;
+        this.CPF = CPF;
         this.cadastro = cadastro;
         this.distribuicao = distribuicao;
     }
@@ -38,6 +44,22 @@ public class Agricultor {
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCPF() {
+        return CPF;
+    }
+
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
     }
 
     public Sistema getCadastro() {
@@ -61,6 +83,8 @@ public class Agricultor {
         return "Agricultor{" +
                 "plantcao='" + plantcao + '\'' +
                 ", quantidade=" + quantidade +
+                ", nome='" + nome + '\'' +
+                ", CPF='" + CPF + '\'' +
                 ", cadastro=" + cadastro +
                 ", distribuicao=" + distribuicao +
                 '}';
