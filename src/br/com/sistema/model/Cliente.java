@@ -1,6 +1,6 @@
 package br.com.sistema.model;
 
-public class Cadastramento extends Sistema{
+public class Cliente {
 
     private String nome;
 
@@ -10,10 +10,10 @@ public class Cadastramento extends Sistema{
 
     private String localizacao;
 
-    public Cadastramento() {
+    public Cliente() {
     }
 
-    public Cadastramento(String nome, String CPF, String CNPJ, String localizacao) {
+    public Cliente(String nome, String CPF, String CNPJ, String localizacao) {
         this.nome = nome;
         this.CPF = CPF;
         this.CNPJ = CNPJ;
@@ -53,9 +53,10 @@ public class Cadastramento extends Sistema{
         this.localizacao = localizacao;
     }
 
+
     @Override
     public String toString() {
-        return "Cadastramento{" +
+        return "Cliente{" +
                 "nome='" + nome + '\'' +
                 ", CPF='" + CPF + '\'' +
                 ", CNPJ='" + CNPJ + '\'' +

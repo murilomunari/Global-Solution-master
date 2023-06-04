@@ -1,41 +1,39 @@
 package br.com.pessoa.model;
 
 import br.com.empresa.model.Ongs;
-import br.com.sistema.model.Sistema;
+import br.com.sistema.model.Cliente;
 
 public class Agricultor {
 
-    private String plantcao;
+    private String nome;
 
     private int quantidade;
 
-    private String nome;
+    private String plantacao;
 
     private String CPF;
 
-    private Sistema cadastro;
-
     private Ongs distribuicao;
+
+    private Cliente agricultor;
 
     public Agricultor() {
     }
 
-    public Agricultor(String plantcao, int quantidade, String nome, String CPF, Sistema cadastro, Ongs distribuicao) {
-        this.plantcao = plantcao;
-        this.quantidade = quantidade;
+    public Agricultor(String nome, int quantidade, String plantacao, String CPF) {
         this.nome = nome;
+        this.quantidade = quantidade;
+        this.plantacao = plantacao;
         this.CPF = CPF;
-        this.cadastro = cadastro;
-        this.distribuicao = distribuicao;
     }
 
 
-    public String getPlantcao() {
-        return plantcao;
+    public String getNome() {
+        return nome;
     }
 
-    public void setPlantcao(String plantcao) {
-        this.plantcao = plantcao;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public int getQuantidade() {
@@ -46,12 +44,12 @@ public class Agricultor {
         this.quantidade = quantidade;
     }
 
-    public String getNome() {
-        return nome;
+    public String getPlantacao() {
+        return plantacao;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setPlantacao(String plantacao) {
+        this.plantacao = plantacao;
     }
 
     public String getCPF() {
@@ -62,14 +60,6 @@ public class Agricultor {
         this.CPF = CPF;
     }
 
-    public Sistema getCadastro() {
-        return cadastro;
-    }
-
-    public void setCadastro(Sistema cadastro) {
-        this.cadastro = cadastro;
-    }
-
     public Ongs getDistribuicao() {
         return distribuicao;
     }
@@ -78,15 +68,24 @@ public class Agricultor {
         this.distribuicao = distribuicao;
     }
 
+    public Cliente getAgricultor() {
+        return agricultor;
+    }
+
+    public void setAgricultor(Cliente agricultor) {
+        this.agricultor = agricultor;
+    }
+
+
     @Override
     public String toString() {
         return "Agricultor{" +
-                "plantcao='" + plantcao + '\'' +
+                "nome='" + nome + '\'' +
                 ", quantidade=" + quantidade +
-                ", nome='" + nome + '\'' +
+                ", plantacao='" + plantacao + '\'' +
                 ", CPF='" + CPF + '\'' +
-                ", cadastro=" + cadastro +
                 ", distribuicao=" + distribuicao +
+                ", agricultor=" + agricultor +
                 '}';
     }
 }

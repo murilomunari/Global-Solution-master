@@ -1,5 +1,7 @@
 package br.com.pessoa.model;
 
+import br.com.sistema.model.Cliente;
+
 public class Voluntarios {
 
     private String nome;
@@ -9,6 +11,8 @@ public class Voluntarios {
     private String localizacao;
 
     private String numeroTelefone;
+
+    private Cliente voluntarios;
 
     public Voluntarios() {
     }
@@ -53,6 +57,14 @@ public class Voluntarios {
         this.numeroTelefone = numeroTelefone;
     }
 
+    public Cliente getVoluntarios() {
+        return voluntarios;
+    }
+
+    public void setVoluntarios(Cliente voluntarios) {
+        this.voluntarios = voluntarios;
+    }
+
     @Override
     public String toString() {
         return "Voluntarios{" +
@@ -60,6 +72,9 @@ public class Voluntarios {
                 ", CPF='" + CPF + '\'' +
                 ", localizacao='" + localizacao + '\'' +
                 ", numeroTelefone='" + numeroTelefone + '\'' +
+                ", voluntarios=" + voluntarios +
                 '}';
     }
+
+
 }

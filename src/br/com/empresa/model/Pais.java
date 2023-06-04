@@ -1,29 +1,26 @@
-package br.com.sistema.model;
+package br.com.empresa.model;
 
-import br.com.empresa.model.Ongs;
-
-public class Pais {
+public class Pais extends Ongs{
 
     private String nome;
 
     private String continente;
 
-    private Ongs recebimento;
-
     public Pais() {
     }
 
-    public Pais(String nome, String continente, Ongs recebimento) {
+    public Pais(String nome, String continente) {
         this.nome = nome;
         this.continente = continente;
-        this.recebimento = recebimento;
     }
 
 
+    @Override
     public String getNome() {
         return nome;
     }
 
+    @Override
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -36,20 +33,11 @@ public class Pais {
         this.continente = continente;
     }
 
-    public Ongs getRecebimento() {
-        return recebimento;
-    }
-
-    public void setRecebimento(Ongs recebimento) {
-        this.recebimento = recebimento;
-    }
-
     @Override
     public String toString() {
         return "Pais{" +
                 "nome='" + nome + '\'' +
                 ", continente='" + continente + '\'' +
-                ", recebimento=" + recebimento +
                 '}';
     }
 }

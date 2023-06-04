@@ -1,34 +1,41 @@
 package br.com.empresa.model;
 
-import br.com.sistema.model.Sistema;
+import br.com.sistema.model.Cliente;
 
 public class Ongs {
 
-    private String transporte;
+    private String nome;
+
+    private String paisDestinatario;
 
     private String distribuicao;
 
-    private String validarProduto;
-
-    private Sistema cadastro;
+    private Cliente ongs;
 
     public Ongs() {
     }
 
-    public Ongs(String transporte, String distribuicao, String validarProduto, Sistema cadastro) {
-        this.transporte = transporte;
+    public Ongs(String nome, String paisDestinatario, String distribuicao) {
+        this.nome = nome;
+        this.paisDestinatario = paisDestinatario;
         this.distribuicao = distribuicao;
-        this.validarProduto = validarProduto;
-        this.cadastro = cadastro;
     }
 
 
-    public String getTransporte() {
-        return transporte;
+    public String getNome() {
+        return nome;
     }
 
-    public void setTransporte(String transporte) {
-        this.transporte = transporte;
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getPaisDestinatario() {
+        return paisDestinatario;
+    }
+
+    public void setPaisDestinatario(String paisDestinatario) {
+        this.paisDestinatario = paisDestinatario;
     }
 
     public String getDistribuicao() {
@@ -39,29 +46,22 @@ public class Ongs {
         this.distribuicao = distribuicao;
     }
 
-    public String getValidarProduto() {
-        return validarProduto;
+    public Cliente getOngs() {
+        return ongs;
     }
 
-    public void setValidarProduto(String validarProduto) {
-        this.validarProduto = validarProduto;
-    }
-
-    public Sistema getCadastro() {
-        return cadastro;
-    }
-
-    public void setCadastro(Sistema cadastro) {
-        this.cadastro = cadastro;
+    public void setOngs(Cliente ongs) {
+        this.ongs = ongs;
     }
 
     @Override
     public String toString() {
         return "Ongs{" +
-                "transporte='" + transporte + '\'' +
+                "nome='" + nome + '\'' +
+                ", paisDestinatario='" + paisDestinatario + '\'' +
                 ", distribuicao='" + distribuicao + '\'' +
-                ", validarProduto='" + validarProduto + '\'' +
-                ", cadastro=" + cadastro +
+                ", ongs=" + ongs +
                 '}';
     }
 }
+
