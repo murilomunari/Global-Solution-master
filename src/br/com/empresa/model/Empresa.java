@@ -15,7 +15,7 @@ public class Empresa {
 
    private String produtos;
 
-   private String ajudaFinaceira;
+   private int ajudaFinaceira;
 
    private Ongs distribuicao;
 
@@ -64,11 +64,11 @@ public class Empresa {
         this.produtos = produtos;
     }
 
-    public String getAjudaFinaceira() {
+    public int getAjudaFinaceira() {
         return ajudaFinaceira;
     }
 
-    public void setAjudaFinaceira(String ajudaFinaceira) {
+    public void setAjudaFinaceira(int ajudaFinaceira) {
         this.ajudaFinaceira = ajudaFinaceira;
     }
 
@@ -99,6 +99,7 @@ public class Empresa {
                 ", colaboladores=" + colaboladores +
                 '}';
     }
+
 
 }
 
